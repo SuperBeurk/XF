@@ -1,0 +1,8 @@
+<map id="XFDispatcher" name="XFDispatcher">
+<area shape="rect" id="node1" title="A dispatcher implementation which can be used without an OS." alt="" coords="129,823,301,1003"/>
+<area shape="rect" id="node2" href="$classinterface_1_1_x_f_dispatcher.html" title="Interface for the XF dispatcher providing the event processing loop." alt="" coords="5,507,177,701"/>
+<area shape="rect" id="node3" href="$class_x_f_event_queue.html" title="Default Qt implementation for the XFEventQueue interface." alt="" coords="253,448,404,760"/>
+<area shape="rect" id="node4" href="$classinterface_1_1_x_f_event_queue.html" title="Interface to be implemented by the event queue." alt="" coords="378,213,557,378"/>
+<area shape="rect" id="node5" href="$class_x_f_mutex.html" title="Default Qt implementation for the XFMutex interface." alt="" coords="253,205,354,385"/>
+<area shape="rect" id="node6" href="$classinterface_1_1_x_f_mutex.html" title="Mutex interface needed by the XF to access a mutex." alt="" coords="175,5,315,156"/>
+</map>
