@@ -16,16 +16,16 @@ interface::XFMutex * interface::XFMutex::create()
 // TODO: Implement code for XFMutex class 
 void XFMutex::lock()
 {
-
+    mutex_.lock();
 }
 void XFMutex::unlock()
 {
-
+    mutex_.unlock();
 }
 
 bool XFMutex::tryLock(int32_t timeout)
 {
-
+    mutex_.tryLock(timeout);
 }
 
 #endif // USE_XF_IDF_QT_MUTEX_CLASS

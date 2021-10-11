@@ -30,9 +30,6 @@ void XFTimeoutManager::start(std::function<void (uint32_t)> startTimeoutManagerT
 }
 void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, interface::XFBehavior *pBehavior)
 {
-    //BAsic add
-    // timeouts_.push_back(new XFTimeout(timeoutId,interval,pBehavior));
-
      //Smart add
      int sub=0;
      if(timeouts_.empty())
@@ -43,7 +40,7 @@ void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, inte
      {
          for(std::list<XFTimeout *>::iterator it=timeouts_.begin();it!=timeouts_.end();it++)//Parcour the list
          {
-             if((*it)->getRelTicks()>interval||(*it)==timeouts_.back())
+             if((*it)->getRelTicks()>interval)//Insert in middle of the list
              {
                  it=timeouts_.insert(it,new XFTimeout(timeoutId,interval,pBehavior));//Add new Timeout
                  for(;it!=timeouts_.end();it++)//Set all tick after this element
@@ -58,6 +55,9 @@ void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, inte
                  sub+=(*it)->getRelTicks();
              }
          }
+         timeouts_.push_back(new XFTimeout(timeoutId,interval,pBehavior));
+         timeouts_.back()->setRelTicks(timeouts_.back()->getRelTicks()-sub);
+
      }
 
 }
@@ -67,32 +67,21 @@ void XFTimeoutManager::unscheduleTimeout(int32_t timeoutId, interface::XFBehavio
 }
 void XFTimeoutManager::tick()
 {
-    /*for(std::list<XFTimeout *>::iterator it=timeouts_.begin();it!=timeouts_.end();it++)
+    if(timeouts_.empty()==false)
     {
-        if((*it)->getRelTicks()==0)
+        for(std::list<XFTimeout *>::iterator it=timeouts_.begin();it!=timeouts_.end();)
         {
-            //Create new event because timer is finished
-            (*it)->getBehavior()->pushEvent((*it),true);
-            timeouts_.erase(it);
-            break;
+            if((*it)->getRelTicks()<=0)
+            {
+                (*it)->getBehavior()->pushEvent((*it),true);
+                it=timeouts_.erase(it);
+            }
+            else
+            {
+                it++;
+            }
         }
-        else
-        {
-            (*it)->substractFromRelTicks(tickInterval_);
-        }
-
-    }*/
-    if(timeouts_.empty()==0)
-    {
-        if(timeouts_.front()->getRelTicks()<=0)
-        {
-            timeouts_.front()->getBehavior()->pushEvent(timeouts_.front(),true);
-            timeouts_.pop_front();
-        }
-        else
-        {
-            timeouts_.front()->substractFromRelTicks(tickInterval_);
-        }
+        timeouts_.front()->substractFromRelTicks(tickInterval_);
     }
 
 }
