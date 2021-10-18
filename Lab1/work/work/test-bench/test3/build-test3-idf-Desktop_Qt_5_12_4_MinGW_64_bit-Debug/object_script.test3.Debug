@@ -1,0 +1,17 @@
+debug/customevent.o
+debug/initialevent.o
+debug/defaulttransition.o
+debug/behavior.o
+debug/timeout.o
+debug/timeoutmanager.o
+debug/dispatcher.o
+debug/eventqueue.o
+debug/mutex.o
+debug/xf.o
+debug/trace.o
+debug/board.o
+debug/ledcontroller.o
+debug/main.o
+debug/statemachine03.o
+debug/testfactory03.o
+debug/evrestart.o

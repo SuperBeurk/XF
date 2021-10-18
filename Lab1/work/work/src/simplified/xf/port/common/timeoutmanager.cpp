@@ -70,7 +70,10 @@ void XFTimeoutManager::tick()
             timeouts_.front()->getBehavior()->pushEvent(timeouts_.front(),true);
             timeouts_.pop_front();
         }
-        timeouts_.front()->substractFromRelTicks(tickInterval_);
+        if(timeouts_.empty()==false)
+        {
+            timeouts_.front()->substractFromRelTicks(tickInterval_);
+        }
     }
 
 }

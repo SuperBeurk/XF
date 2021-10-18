@@ -70,7 +70,11 @@ int XFDispatcher::execute(const void *param)
 void XFDispatcher::dispatchEvent(const XFEvent *pEvent) const
 {
     //Dispatch event that has been pop
-    pEvent->getBehavior()->process(pEvent);
+    XFBehavior::TerminateBehavior pTerminate=pEvent->getBehavior()->process(pEvent);
+    if(pTerminate)
+    {
+        delete pEvent->getBehavior();
+    }
 
 }
 

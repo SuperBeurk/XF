@@ -31,12 +31,12 @@ void XFBehavior::pushEvent(XFEvent *pEvent, bool fromISR)
 
 bool XFBehavior::deleteOnTerminate() const
 {
-
+    return deleteOnTerminate_;
 }
 
 void XFBehavior::setDeleteOnTerminate(bool deleteBehaviour)
 {
-
+     deleteOnTerminate_=deleteBehaviour;
 }
 
 const XFEvent *XFBehavior::getCurrentEvent() const
@@ -62,6 +62,6 @@ void XFBehavior::setCurrentEvent(const XFEvent *pEvent)
 XFBehavior::TerminateBehavior XFBehavior::process(const XFEvent *pEvent)
 {
     setCurrentEvent(pEvent);
-    processEvent();
-    //Delete pEvent
+    XFEventStatus status =processEvent();
+    return ((deleteOnTerminate_)&&(status==XFEventStatus::Terminate));
 }
