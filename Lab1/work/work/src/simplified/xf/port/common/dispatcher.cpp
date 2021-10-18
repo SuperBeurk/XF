@@ -48,6 +48,7 @@ void XFDispatcher::scheduleTimeout(int timeoutId, int interval, interface::XFBeh
 void XFDispatcher::unscheduleTimeout(int timeoutId, interface::XFBehavior *pBehavior)
 {
     //call timeout manager schedule timeout
+    interface::XFTimeoutManager::getInstance()->unscheduleTimeout(timeoutId,pBehavior);
 }
 
 void XFDispatcher::executeOnce()

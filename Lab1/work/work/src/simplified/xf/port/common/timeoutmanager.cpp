@@ -59,7 +59,13 @@ void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, inte
 }
 void XFTimeoutManager::unscheduleTimeout(int32_t timeoutId, interface::XFBehavior *pBehavior)
 {
-
+    for(std::list<XFTimeout *>::iterator it=timeouts_.begin();it!=timeouts_.end();it++)//Parcour the list
+    {
+        if((*it)->getId()==timeoutId)//Insert in middle of the list
+        {
+            it=timeouts_.erase(it);//Remove
+        }
+    }
 }
 void XFTimeoutManager::tick()
 {
