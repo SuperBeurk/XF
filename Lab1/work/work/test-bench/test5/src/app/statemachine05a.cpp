@@ -2,6 +2,7 @@
 #include "trace/trace.h"
 #include "statemachine05a.h"
 
+
 /**
  * Constructor
  *
@@ -43,7 +44,9 @@ XFEventStatus StateMachine05a::processEvent()
 				 getCurrentTimeout()->getId() == Timeout_SAY_HELLO_id))
 			{
 				{
-					Trace::out(getText());
+                    Trace::out(getText());
+
+
 				}
 
                 scheduleTimeout(Timeout_SAY_HELLO_id, 500);
