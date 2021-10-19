@@ -25,7 +25,7 @@ void XFBehavior::startBehavior()
 void XFBehavior::pushEvent(XFEvent *pEvent, bool fromISR)
 {
     pEvent->setBehavior(this);
-    //Add event to event list
+    //call dispatcher method to add event to event list
     interface::XFDispatcher::getInstance()->pushEvent(pEvent,fromISR);
 }
 
@@ -63,5 +63,5 @@ XFBehavior::TerminateBehavior XFBehavior::process(const XFEvent *pEvent)
 {
     setCurrentEvent(pEvent);
     XFEventStatus status =processEvent();
-    return ((deleteOnTerminate_)&&(status==XFEventStatus::Terminate));
+    return ((deleteOnTerminate_)&&(status==XFEventStatus::Terminate));//return true if we have deleteOnTerminate attribute set and if status is an Terminate Event
 }

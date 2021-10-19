@@ -35,28 +35,28 @@ XFDispatcher::~XFDispatcher()
 
 void XFDispatcher::pushEvent(XFEvent *pEvent, bool fromISR)
 {
-    _events.push(pEvent,fromISR);
+    _events.push(pEvent,fromISR);//Push an XF event to our event list
 }
 
 void XFDispatcher::scheduleTimeout(int timeoutId, int interval, interface::XFBehavior *pBehavior)
 {
     //call timeout manager schedule timeout
-    interface::XFTimeoutManager::getInstance()->scheduleTimeout(timeoutId,interval,pBehavior);
+    interface::XFTimeoutManager::getInstance()->scheduleTimeout(timeoutId,interval,pBehavior);//Call scheduleTimeout method from XF::TimeoutManager
 
 }
 
 void XFDispatcher::unscheduleTimeout(int timeoutId, interface::XFBehavior *pBehavior)
 {
     //call timeout manager schedule timeout
-    interface::XFTimeoutManager::getInstance()->unscheduleTimeout(timeoutId,pBehavior);
+    interface::XFTimeoutManager::getInstance()->unscheduleTimeout(timeoutId,pBehavior);//Call unscheduleTimeout method from XF::TimeoutManager
 }
 
 void XFDispatcher::executeOnce()
 {
     if(_events.empty()==0)
     {
-        dispatchEvent(_events.front());
-        _events.pop();
+        dispatchEvent(_events.front());//dispatch first event of the list
+        _events.pop();//Pop it of the list
     }
 }
 
@@ -71,10 +71,10 @@ int XFDispatcher::execute(const void *param)
 void XFDispatcher::dispatchEvent(const XFEvent *pEvent) const
 {
     //Dispatch event that has been pop
-    XFBehavior::TerminateBehavior pTerminate=pEvent->getBehavior()->process(pEvent);
+    XFBehavior::TerminateBehavior pTerminate=pEvent->getBehavior()->process(pEvent);//Distribute the event that has been pop to the correct stateMachine
     if(pTerminate)
     {
-        delete pEvent->getBehavior();
+        delete pEvent->getBehavior();//Kill the stateMachine if it's in terminate event
     }
 
 }
