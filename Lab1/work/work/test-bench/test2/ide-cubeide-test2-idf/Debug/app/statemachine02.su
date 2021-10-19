@@ -1,0 +1,4 @@
+statemachine02.cpp:16:1:StateMachine02::~StateMachine02()	8	static
+statemachine02.cpp:16:1:virtual StateMachine02::~StateMachine02()	8	static
+statemachine02.cpp:24:15:virtual XFEventStatus StateMachine02::processEvent()	24	static
+statemachine02.cpp:7:1:StateMachine02::StateMachine02()	8	static

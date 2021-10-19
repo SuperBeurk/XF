@@ -1,0 +1,8 @@
+uart.cpp:36:1:Uart::~Uart()	0	static
+uart.cpp:36:1:virtual Uart::~Uart()	8	static
+uart.cpp:12:1:Uart::Uart(unsigned char, UART_HandleTypeDef*, bool)	8	static
+uart.cpp:41:6:bool Uart::initialize()	0	static
+uart.cpp:46:6:bool Uart::enable()	0	static
+uart.cpp:53:6:bool Uart::disable()	0	static
+uart.cpp:78:6:void Uart::writeUsingDMA(const uint8_t*, uint32_t)	16	static
+uart.cpp:60:6:void Uart::write(const char*, unsigned int)	16	static

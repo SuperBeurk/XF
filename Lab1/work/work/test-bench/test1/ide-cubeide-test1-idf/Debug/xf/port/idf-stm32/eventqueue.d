@@ -1,0 +1,23 @@
+xf/port/idf-stm32/eventqueue.o: \
+ C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/port/idf-stm32/eventqueue.cpp \
+ c:\users\sebastie.metral\desktop\ptr\xf\lab1\work\work\test-bench\common\config\xf-config.h \
+ C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/test-bench/test1/ide-cubeide-test1-idf/config/xf-port-config.h \
+ C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/port/idf-stm32/eventqueue.h \
+ C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/include/xf/interface/eventqueue.h \
+ C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/port/idf-stm32/mutex.h \
+ C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/include/xf/interface/mutex.h \
+ C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/port/idf-stm32/eventqueue.h
+
+c:\users\sebastie.metral\desktop\ptr\xf\lab1\work\work\test-bench\common\config\xf-config.h:
+
+C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/test-bench/test1/ide-cubeide-test1-idf/config/xf-port-config.h:
+
+C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/port/idf-stm32/eventqueue.h:
+
+C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/include/xf/interface/eventqueue.h:
+
+C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/port/idf-stm32/mutex.h:
+
+C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/include/xf/interface/mutex.h:
+
+C:/Users/sebastie.metral/Desktop/PTR/XF/Lab1/work/work/src/simplified/xf/port/idf-stm32/eventqueue.h:

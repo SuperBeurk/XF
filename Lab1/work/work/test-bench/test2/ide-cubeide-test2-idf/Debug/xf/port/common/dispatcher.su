@@ -1,0 +1,11 @@
+dispatcher.cpp:63:5:virtual int XFDispatcher::execute(const void*)	8	static
+dispatcher.cpp:71:6:virtual void XFDispatcher::dispatchEvent(const XFEvent*) const	8	static
+dispatcher.cpp:41:6:virtual void XFDispatcher::scheduleTimeout(int, int, interface::XFBehavior*)	24	static
+dispatcher.cpp:48:6:virtual void XFDispatcher::unscheduleTimeout(int, interface::XFBehavior*)	16	static
+dispatcher.cpp:26:1:XFDispatcher::XFDispatcher()	8	static
+dispatcher.cpp:18:27:static interface::XFDispatcher* interface::XFDispatcher::getInstance()	8	static
+dispatcher.cpp:31:1:XFDispatcher::~XFDispatcher()	8	static
+dispatcher.cpp:20:27:void __tcf_0()	8	static
+dispatcher.cpp:31:1:virtual XFDispatcher::~XFDispatcher()	8	static
+dispatcher.cpp:36:6:virtual void XFDispatcher::pushEvent(XFEvent*, bool)	8	static
+dispatcher.cpp:54:6:virtual void XFDispatcher::executeOnce()	16	static

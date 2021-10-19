@@ -1,0 +1,9 @@
+ledcontroller.cpp:30:1:LedController::~LedController()	0	static
+ledcontroller.cpp:30:1:virtual LedController::~LedController()	8	static
+ledcontroller.cpp:52:6:void LedController::setLed0(bool)	8	static
+ledcontroller.cpp:76:6:void LedController::setLed1(bool)	8	static
+ledcontroller.cpp:100:6:void LedController::setLed2(bool)	8	static
+ledcontroller.cpp:124:6:void LedController::setLed3(bool)	8	static
+ledcontroller.cpp:10:1:LedController::LedController()	8	static
+ledcontroller.cpp:39:6:void LedController::setLeds(uint8_t, bool)	24	static
+ledcontroller.cpp:34:6:void LedController::setLed(uint8_t, bool)	8	static

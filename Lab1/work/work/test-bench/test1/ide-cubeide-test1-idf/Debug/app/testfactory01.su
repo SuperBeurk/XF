@@ -1,0 +1,8 @@
+testfactory01.cpp:5:6:void Factory_initialize()	0	static
+testfactory01.cpp:18:1:TestFactory01::TestFactory01()	0	static
+testfactory01.cpp:23:6:static void TestFactory01::initialize()	0	static
+testfactory01.cpp:28:6:static void TestFactory01::build()	8	static
+testfactory01.cpp:10:6:void Factory_build()	8	static
+testfactory01.cpp:36:1:void __static_initialization_and_destruction_0(int, int)	72	static
+testfactory01.cpp:36:1:cpp)	8	static
+testfactory01.cpp:36:1:cpp)	8	static

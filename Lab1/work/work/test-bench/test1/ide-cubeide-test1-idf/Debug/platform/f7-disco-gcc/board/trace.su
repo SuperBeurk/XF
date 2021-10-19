@@ -1,0 +1,14 @@
+trace.cpp:26:29:interface::XFMutex& traceMutex()	0	static
+trace.cpp:31:13:void traceMutexLock()	8	static
+trace.cpp:36:13:void traceMutexUnlock()	8	static
+trace.cpp:66:16:int32_t checkStringEnding(char*, uint32_t)	8	static
+trace.cpp:46:6:)	24	static
+trace.cpp:61:6:static void Trace::initialize()	8	static
+trace.cpp:41:6:void trace_initialize()	8	static
+trace.cpp:103:6:static void Trace::out(std::string)	24	static
+trace.cpp:121:6:)	32	static
+trace.cpp:138:6:static void Trace::lock()	8	static
+trace.cpp:144:6:static void Trace::unlock()	8	static
+trace.cpp:147:1:void __static_initialization_and_destruction_0(int, int)	16	static
+trace.cpp:147:1:cpp)	8	static
+trace.cpp:147:1:cpp)	8	static

@@ -1,0 +1,8 @@
+testfactory02.cpp:16:1:TestFactory02::TestFactory02()	0	static
+testfactory02.cpp:43:17:static StateMachine02& TestFactory02::getStaticTask()	8	static
+testfactory02.cpp:51:17:static StateMachine02& TestFactory02::getDynamicTask()	8	static
+testfactory02.cpp:21:6:static void TestFactory02::initialize()	8	static
+testfactory02.cpp:6:6:void Factory_initialize()	8	static
+testfactory02.cpp:32:6:static void TestFactory02::build()	8	static
+testfactory02.cpp:11:6:void Factory_build()	8	static
+testfactory02.cpp:45:27:void __tcf_0()	8	static

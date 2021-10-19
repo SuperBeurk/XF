@@ -8,5 +8,5 @@ XFInitialEvent::XFInitialEvent():XFEvent(Initial)
 
 bool XFInitialEvent::deleteAfterConsume() const
 {
-
+	return true;
 }

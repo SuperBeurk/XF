@@ -61,7 +61,7 @@ public :
 
     inline int getId() const { return id_; }		///< Returns #id_ identifying the event in the behaviors context.
 
-    virtual bool deleteAfterConsume() const { return false; }	///< Tells the dispatcher if the event must be deleted or not.
+    virtual bool deleteAfterConsume() const { return true; }	///< Tells the dispatcher if the event must be deleted or not.
 
 protected:
     const XFEventType eventType_;		///< Holds the type of the event.

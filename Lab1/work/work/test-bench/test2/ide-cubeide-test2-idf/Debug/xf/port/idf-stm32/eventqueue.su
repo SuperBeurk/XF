@@ -1,0 +1,15 @@
+eventqueue.cpp:18:6:virtual bool XFEventQueue::empty() const	0	static
+eventqueue.cpp:27:16:virtual const XFEvent* XFEventQueue::front()	0	static
+eventqueue.cpp:35:6:virtual bool XFEventQueue::pend()	0	static
+stl_deque.h:756:5:void std::_Deque_base<_Tp, _Alloc>::_M_destroy_nodes(std::_Deque_base<_Tp, _Alloc>::_Map_pointer, std::_Deque_base<_Tp, _Alloc>::_Map_pointer) [with _Tp = const XFEvent*; _Alloc = std::allocator<const XFEvent*>]	16	static
+stl_deque.h:678:5:std::_Deque_base<_Tp, _Alloc>::~_Deque_base() [with _Tp = const XFEvent*; _Alloc = std::allocator<const XFEvent*>]	8	static
+eventqueue.cpp:15:1:XFEventQueue::~XFEventQueue()	8	static
+eventqueue.cpp:15:1:virtual XFEventQueue::~XFEventQueue()	8	static
+deque.tcc:571:10:void std::deque<_Tp, _Alloc>::_M_pop_front_aux() [with _Tp = const XFEvent*; _Alloc = std::allocator<const XFEvent*>]	8	static
+eventqueue.cpp:31:6:virtual void XFEventQueue::pop()	8	static
+stl_deque.h:738:5:void std::_Deque_base<_Tp, _Alloc>::_M_create_nodes(std::_Deque_base<_Tp, _Alloc>::_Map_pointer, std::_Deque_base<_Tp, _Alloc>::_Map_pointer) [with _Tp = const XFEvent*; _Alloc = std::allocator<const XFEvent*>]	16	static
+stl_deque.h:699:5:void std::_Deque_base<_Tp, _Alloc>::_M_initialize_map(std::size_t) [with _Tp = const XFEvent*; _Alloc = std::allocator<const XFEvent*>]	40	static
+eventqueue.cpp:12:1:XFEventQueue::XFEventQueue()	8	static
+deque.tcc:926:5:void std::deque<_Tp, _Alloc>::_M_reallocate_map(std::deque<_Tp, _Alloc>::size_type, bool) [with _Tp = const XFEvent*; _Alloc = std::allocator<const XFEvent*>]	40	static
+deque.tcc:479:7:) [with _Args = {const XFEvent* const&}; _Tp = const XFEvent*; _Alloc = std::allocator<const XFEvent*>]	16	static
+eventqueue.cpp:22:6:virtual bool XFEventQueue::push(const XFEvent*, bool)	16	static

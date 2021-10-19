@@ -12,10 +12,10 @@ XFTimeout::XFTimeout(int id, int interval, interface::XFBehavior *pBehavior):XFE
 
 bool XFTimeout::operator ==(const XFTimeout &timeout) const
 {
-
+	return false;
 }
 
 bool XFTimeout::deleteAfterConsume() const
 {
-
+	return true;
 }

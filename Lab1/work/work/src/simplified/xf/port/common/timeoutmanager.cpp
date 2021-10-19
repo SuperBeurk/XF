@@ -26,7 +26,10 @@ XFTimeoutManager::~XFTimeoutManager()
 }
 void XFTimeoutManager::start(std::function<void (uint32_t)> startTimeoutManagerTimer)
 {
-    startTimeoutManagerTimer(tickInterval_);//Start timer wich will tick every tickInterval ms
+	if (startTimeoutManagerTimer != nullptr) {
+		startTimeoutManagerTimer(tickInterval_);//Start timer wich will tick every tickInterval ms
+	}
+
 }
 void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, interface::XFBehavior *pBehavior)
 {
@@ -35,13 +38,16 @@ void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, inte
 }
 void XFTimeoutManager::unscheduleTimeout(int32_t timeoutId, interface::XFBehavior *pBehavior)
 {
-    for(std::list<XFTimeout *>::iterator it=timeouts_.begin();it!=timeouts_.end();it++)//Parcour the list
-    {
-        if((*it)->getId()==timeoutId)//Check current timer id with id to delete
-        {
-            it=timeouts_.erase(it);//delete element and update iterator
-        }
-    }
+	if(timeouts_.empty()==false)
+	{
+		for(std::list<XFTimeout *>::iterator it=timeouts_.begin();it!=timeouts_.end();it++)//Parcour the list
+		{
+			if((*it)->getId()==timeoutId)//Check current timer id with id to delete
+			{
+				it=timeouts_.erase(it);//delete element and update iterator
+			}
+		}
+	}
 }
 void XFTimeoutManager::tick()
 {

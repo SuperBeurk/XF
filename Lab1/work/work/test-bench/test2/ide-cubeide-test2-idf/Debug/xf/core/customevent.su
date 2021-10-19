@@ -1,0 +1,4 @@
+customevent.h:37:10:virtual bool XFCustomEvent::deleteAfterConsume() const	0	static
+customevent.h:22:7:XFCustomEvent::~XFCustomEvent()	0	static
+customevent.h:22:7:virtual XFCustomEvent::~XFCustomEvent()	8	static
+customevent.cpp:4:1:XFCustomEvent::XFCustomEvent(int, interface::XFBehavior*)	0	static

@@ -8,5 +8,5 @@ XFDefaultTransition::XFDefaultTransition(interface::XFBehavior *pBehavior):XFEve
 
 bool XFDefaultTransition::deleteAfterConsume() const
 {
-
+	return true;
 }
