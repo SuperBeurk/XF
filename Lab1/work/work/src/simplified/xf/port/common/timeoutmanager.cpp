@@ -49,6 +49,10 @@ void XFTimeoutManager::unscheduleTimeout(int32_t timeoutId, interface::XFBehavio
 				{
 					(*it)->addToRelTicks((*(--it))->getRelTicks());//update the deleted following element reltick
 				}
+				else
+				{
+					--it;
+				}
 				deletedTimeout=(*it);
 				it=timeouts_.erase(it);//delete element and update iterator
 				delete deletedTimeout;//delete timeout that has been removed
