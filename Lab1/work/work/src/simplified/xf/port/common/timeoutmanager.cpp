@@ -38,13 +38,20 @@ void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, inte
 }
 void XFTimeoutManager::unscheduleTimeout(int32_t timeoutId, interface::XFBehavior *pBehavior)
 {
+	XFTimeout* deletedTimeout = nullptr;
 	if(timeouts_.empty()==false)
 	{
 		for(std::list<XFTimeout *>::iterator it=timeouts_.begin();it!=timeouts_.end();it++)//Parcour the list
 		{
 			if((*it)->getId()==timeoutId)//Check current timer id with id to delete
 			{
+				if((++it)!=timeouts_.end())
+				{
+					(*it)->addToRelTicks((*(--it))->getRelTicks());//update the deleted following element reltick
+				}
+				deletedTimeout=(*it);
 				it=timeouts_.erase(it);//delete element and update iterator
+				delete deletedTimeout;//delete timeout that has been removed
 			}
 		}
 	}
@@ -58,6 +65,7 @@ void XFTimeoutManager::tick()
         {
             returnTimeout(timeouts_.front());//Push event of this timer
             timeouts_.pop_front();//Pop this timer of the timeouts list
+
         }
     }
 

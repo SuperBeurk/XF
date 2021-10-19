@@ -20,7 +20,15 @@ bool XFEventQueue::empty() const {
 }
 
 bool XFEventQueue::push(const XFEvent *pEvent, bool fromISR) {
+	if(fromISR)
+	{
+		_mutex.lock();
+	}
 	_queue.push(pEvent);
+	if(fromISR)
+	{
+		_mutex.unlock();
+	}
 	return true;
 }
 
