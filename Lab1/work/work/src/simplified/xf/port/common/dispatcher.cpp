@@ -58,6 +58,9 @@ void XFDispatcher::executeOnce()
         dispatchEvent(_events.front());//dispatch first event of the list
         _events.pop();//Pop it of the list
     }
+    else {
+        _events.pend();
+    }
 }
 
 int XFDispatcher::execute(const void *param)

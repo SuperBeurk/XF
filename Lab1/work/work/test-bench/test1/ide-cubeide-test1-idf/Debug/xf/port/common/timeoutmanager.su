@@ -4,7 +4,7 @@ timeoutmanager.cpp:34:6:virtual void XFTimeoutManager::scheduleTimeout(int32_t, 
 timeoutmanager.cpp:19:1:XFTimeoutManager::XFTimeoutManager()	8	static
 timeoutmanager.cpp:13:31:static interface::XFTimeoutManager* interface::XFTimeoutManager::getInstance()	8	static
 timeoutmanager.cpp:122:6:void XFTimeoutManager::returnTimeout(XFTimeout*)	8	static
-timeoutmanager.cpp:66:6:virtual void XFTimeoutManager::tick()	16	static
+timeoutmanager.cpp:66:6:virtual void XFTimeoutManager::tick()	24	static
 std_function.h:683:5:) const [with _Res = void; _ArgTypes = {long unsigned int}]	16	static
 timeoutmanager.cpp:27:6:virtual void XFTimeoutManager::start(std::function<void(long unsigned int)>)	8	static
 list.tcc:150:5:std::__cxx11::list<_Tp, _Alloc>::iterator std::__cxx11::list<_Tp, _Alloc>::erase(std::__cxx11::list<_Tp, _Alloc>::const_iterator) [with _Tp = XFTimeout*; _Alloc = std::allocator<XFTimeout*>]	16	static

@@ -71,9 +71,9 @@ void XFTimeoutManager::tick()
         timeouts_.front()->substractFromRelTicks(tickInterval_);//Substract front timer with tickInterval
         while(timeouts_.front()->getRelTicks()<=0)//If we reached the cooldown of the first timer
         {
-
-            returnTimeout(timeouts_.front());//Push event of this timer
+            XFTimeout* popTimeout=timeouts_.front();
             timeouts_.pop_front();//Pop this timer of the timeouts list
+            returnTimeout(popTimeout);//Push event of this timer
 
             if(timeouts_.empty())
             {

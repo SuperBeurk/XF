@@ -79,6 +79,7 @@ protected:
      */
     void run() override
     {
+        setPriority(QThread::HighestPriority);
         this->dispatcher_->execute();
     }
 
