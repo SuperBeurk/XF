@@ -38,7 +38,7 @@ void XFTimeoutManager::scheduleTimeout(int32_t timeoutId, int32_t interval, inte
 }
 void XFTimeoutManager::unscheduleTimeout(int32_t timeoutId, interface::XFBehavior *pBehavior)
 {
-    //pMutex_->lock();
+    pMutex_->lock();
 	XFTimeout* deletedTimeout = nullptr;
 	std::list<XFTimeout *>::iterator it;
 	std::list<XFTimeout *>::iterator next;
@@ -61,30 +61,32 @@ void XFTimeoutManager::unscheduleTimeout(int32_t timeoutId, interface::XFBehavio
 			}
 		}
 	}
-    //pMutex_->unlock();
+    pMutex_->unlock();
 }
 void XFTimeoutManager::tick()
 {
+    pMutex_->lock();
     if(timeouts_.empty()==false)
     {
         timeouts_.front()->substractFromRelTicks(tickInterval_);//Substract front timer with tickInterval
         while(timeouts_.front()->getRelTicks()<=0)//If we reached the cooldown of the first timer
         {
-            //pMutex_->lock();
+
             returnTimeout(timeouts_.front());//Push event of this timer
             timeouts_.pop_front();//Pop this timer of the timeouts list
-            //pMutex_->unlock();
+
             if(timeouts_.empty())
             {
             	break;
             }
 
         }
-    }    
+    }
+    pMutex_->unlock();
 }
 void XFTimeoutManager::addTimeout(XFTimeout *pNewTimeout)
 {
-    //pMutex_->lock();
+    pMutex_->lock();
     std::list<XFTimeout *>::iterator it;
     bool insert = false;
     if(timeouts_.empty())
@@ -115,7 +117,7 @@ void XFTimeoutManager::addTimeout(XFTimeout *pNewTimeout)
             timeouts_.push_back(pNewTimeout);//Insert new timer at end of list
         }
     }
-    //pMutex_->unlock();
+    pMutex_->unlock();
 }
 void XFTimeoutManager::returnTimeout(XFTimeout *pTimeout)
 {
