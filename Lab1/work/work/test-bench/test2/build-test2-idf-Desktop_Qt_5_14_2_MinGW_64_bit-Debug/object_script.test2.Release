@@ -1,0 +1,16 @@
+release/customevent.o
+release/initialevent.o
+release/defaulttransition.o
+release/behavior.o
+release/timeout.o
+release/timeoutmanager.o
+release/dispatcher.o
+release/eventqueue.o
+release/mutex.o
+release/xf.o
+release/trace.o
+release/board.o
+release/ledcontroller.o
+release/main.o
+release/statemachine02.o
+release/testfactory02.o

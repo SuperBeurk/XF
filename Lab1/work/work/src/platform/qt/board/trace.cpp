@@ -16,14 +16,9 @@ void Trace::initialize()
 
 void Trace::out(string str)
 {
-//    qDebug(str.data());
-    static QTime old = QTime::currentTime();
     QTime now = QTime::currentTime();
-    int dif = abs(now.msec()-old.msec());
-
-    old=now;
-
-    printf("%s,%s\t,%d\r\n",QTime::currentTime().toString("hh:mm:ss.zzz").toStdString().c_str(),str.data(),dif);
+    string out=now.toString("hh:mm:ss.zzz").toStdString()+" "+str;
+    qDebug()<<out.data();
 }
 
 void Trace::out(const char * format, ...)
