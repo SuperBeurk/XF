@@ -1,4 +1,0 @@
-initialevent.cpp:9:6:virtual bool XFInitialEvent::deleteAfterConsume() const	0	static
-initialevent.h:16:7:XFInitialEvent::~XFInitialEvent()	0	static
-initialevent.h:16:7:virtual XFInitialEvent::~XFInitialEvent()	8	static
-initialevent.cpp:4:1:XFInitialEvent::XFInitialEvent()	0	static

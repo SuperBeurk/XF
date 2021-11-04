@@ -1,5 +1,0 @@
-timeout.cpp:18:6:virtual bool XFTimeout::deleteAfterConsume() const	0	static
-timeout.h:27:7:XFTimeout::~XFTimeout()	0	static
-timeout.h:27:7:virtual XFTimeout::~XFTimeout()	8	static
-timeout.cpp:5:1:XFTimeout::XFTimeout(int, int, interface::XFBehavior*)	8	static
-timeout.cpp:13:6:bool XFTimeout::operator==(const XFTimeout&) const	0	static

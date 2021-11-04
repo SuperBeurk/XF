@@ -1,4 +1,0 @@
-defaulttransition.cpp:9:6:virtual bool XFDefaultTransition::deleteAfterConsume() const	0	static
-defaulttransition.h:19:7:XFDefaultTransition::~XFDefaultTransition()	0	static
-defaulttransition.h:19:7:virtual XFDefaultTransition::~XFDefaultTransition()	8	static
-defaulttransition.cpp:4:1:XFDefaultTransition::XFDefaultTransition(interface::XFBehavior*)	0	static
